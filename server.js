@@ -8,7 +8,7 @@ var app = express();
 // Sets an initial port.
 var PORT = process.env.PORT || 8080;
 // Sets up app to handle data parsing
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 // routes
