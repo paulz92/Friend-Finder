@@ -6,11 +6,11 @@ var friendsArray = [
 	{
     name: "Bubbles",
   	photo: "https://i.pinimg.com/736x/df/0e/fe/df0efec7e5d62bda338fcc8db896f485--funny-shit-hilarious.jpg",
-  	scores: [4, 2, 3, 4, 1, 5, 4, 3, 2, 2]
+  	scores: [4, 1, 3, 4, 1, 5, 4, 3, 2, 2]
 	}, {
     name: "Julian",
   	photo: "https://memegenerator.net/img/images/600x600/15057006/julian-tpb.jpg",
-  	scores:[3, 3, 2, 4, 1, 5, 3, 1, 1, 3]
+  	scores:[3, 3, 2, 4, 1, 5, 3, 1, 5, 3]
 	}, {
     name: "Ricky",
   	photo: "https://images.backstreetmerch.com/storeimages/trailer-park-boys-custom-domain/custom-page/ricky.jpg",

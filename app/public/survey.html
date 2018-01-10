@@ -170,8 +170,9 @@
 	      </div>
 	      <!-- body displays name and picture of match -->
 	      <div class="modal-body">
-	        <h2 id="matchName"></h2>
-	        <img id="matchImg" src="https://rlv.zcache.co.uk/the_original_smiley_face_classic_round_sticker-r8c41697f171a4d97975ffd6ce27b8c3e_v9waf_8byvr_324.jpg" alt="smiley face">
+	        <h2 class="text-center" id="bfName"></h2>
+	        <!-- centering and making image responsive to parent element -->
+	        <img class="img-responsive center-block" id="bfImg" src="" alt="">
 	      </div>
 	      <!-- footer is a close button -->
 	      <div class="modal-footer">
@@ -218,11 +219,12 @@
 		    var currentURL = window.location.origin;
 	    	// post the userData object to /api/friends, add a callback function for displaying the modal after data is posted
 	    	$.post(currentURL + "/api/friends", userData, function(data){
-	    		// use the data from the post so that the best match's name and photo are displayed.
+	    		console.log(data);
+	    		// data is the json response of the best friend - code within apiRoutes lines 23 - 64
 	    		// adding text for the name
-	    		$("#matchName").text(data.name);
+	    		$("#bfName").text(data.name);
 	    		// changing image source for photo
-	    		$('#matchImg').attr("src", data.photo);
+	    		$('#bfImg').attr("src", data.photo);
 		    	// once data posted and best match info populated, toggle modal on
 		    	$("#resultsModal").modal('toggle');
 	    	});
