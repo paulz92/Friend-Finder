@@ -1,29 +1,18 @@
-// ===============================================================================
-// LOAD DATA
-// require friends data, which is an array of objects with info for each friend
-// ===============================================================================
-
+// load friends data
 var friendsData = require("../data/friends.js");
 
-// ===============================================================================
-// ROUTING
-// ===============================================================================
-
+// routing
 module.exports = function(app) {
-  // API GET Requests
+  // API GET request
   // when user visits api/friends, display json format of all data from friends data
-  // ---------------------------------------------------------------------------
-
   app.get("/api/friends", function(req, res) {
     res.json(friendsData);
   });
 
-  // API POST Requests
-  // when user submits and posts to api friends, push the req.body from body parser
-  // to the friends data array in json format
-  // ---------------------------------------------------------------------------
-
+  // API POST request
+  // when user submits and post to api friends occurs, push the req.body 
+  // (aka the userData array built in survey.js) to the friends data array
   app.post("/api/friends", function(req, res) {
     friendsData.push(req.body);
   });
-}
+};
