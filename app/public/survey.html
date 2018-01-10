@@ -212,10 +212,11 @@
 		    	photo: $("#photo").val(),
 		    	scores: [$("#q1").val(), $("#q2").val(), $("#q3").val(), $("#q4").val(), $("#q5").val(), $("#q6").val(), $("#q7").val(), $("#q8").val(), $("#q9").val(), $("#q10").val()]
 		    };
+
 		    // Grab the origin URL of the website
 		    // cannot simply do localhost:8080 as this will end up being deployed and not necesarilly existing only on localhost:8080
 		    var currentURL = window.location.origin;
-	    	// post the userData object to /api/friends
+	    	// post the userData object to /api/friends, add a callback function for displaying the modal after data is posted
 	    	$.post(currentURL + "/api/friends", userData, function(data){
 	    		// use the data from the post so that the best match's name and photo are displayed.
 	    		// adding text for the name
